@@ -1,38 +1,576 @@
-.App {
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  background-color: #f9f4f9;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.app-header {
+  background-color: #dd5ec1;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.app-header h1 {
+  margin: 0;
+  color: white; /* Rosa */
+}
+
+/* Shopping Cart */
+.shopping-cart {
+  position: relative;
+}
+
+.shopping-cart button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cart-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 300px;
+  padding: 15px;
+  z-index: 100;
+}
+
+.cart-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-dropdown li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-total {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.order-button {
+  width: 100%;
+  background-color: #25D366 !important; /* Verde WhatsApp */
+  margin-top: 10px;
+}
+
+/* Product Section */
+.product-section {
+  margin-top: 40px;
+}
+
+.product-section h2 {
+  color: #333;
+  border-bottom: 2px solid #ff69b4;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  margin: 15px 0 10px;
+  font-size: 18px;
+}
+
+.product-card p {
+  color: #ff69b4;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 0 15px;
+}
+
+.product-card button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Admin Panel */
+.admin-toggle {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.admin-panel {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.admin-panel h2 {
+  margin-top: 0;
+}
+
+.admin-panel form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.admin-panel input[type="text"],
+.admin-panel input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.admin-panel button {
+  background-color: #ff69b4;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ... (todos tus estilos anteriores) ... */
+
+/* Estilos para el Login */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.login-form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-form h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.error-message {
+  color: #d93025;
+  margin-bottom: 15px;
+}
+
+/* ... (todos tus estilos anteriores) ... */
+
+/* REEMPLAZA los estilos anteriores de .admin-link con estos */
+.admin-link {
+  background-color: #f0f0f0; /* Un fondo gris muy suave */
+  border: 1px solid #ddd;
+  border-radius: 50%; /* Lo hacemos completamente circular */
+  width: 40px;
+  height: 40px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  cursor: pointer;
+  color: #555; /* Color del ícono */
+  font-size: 18px; /* Tamaño del ícono */
+  transition: all 0.2s ease-in-out; /* Transición suave */
+}
+
+.admin-link:hover {
+  background-color: #e0e0e0;
+  color: #ff69b4; /* Color de la marca al pasar el mouse */
+  transform: scale(1.1); /* Un leve efecto de zoom */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+
+/* (Si tenías un estilo para .header-right, puedes mantenerlo) */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ... (todos tus estilos anteriores) ... */
+
+/* Nuevo contenedor para alinear logo y título */
+.logo-container {
+  display: flex; /* Activa Flexbox */
+  align-items: center; /* Centra verticalmente los elementos */
+  gap: 15px; /* Espacio entre el logo y el texto */
+}
+
+/* Estilos para el logo (puedes ajustar la altura) */
+.app-logo {
+  height: 50px;
+  width: auto;
+}
+
+/* Estilos para el título de la app */
+.app-title {
+  margin: 0; /* Quita márgenes por defecto del h1 */
+  font-size: 24px; /* Tamaño del texto */
+  color: #ff69b4;/*Color rosa de la marca */
+  font-weight: bold;
+}
+
+/* Estilos para el Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  max-width: 400px;
+  width: 90%;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.modal-actions button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button-save {
+  background-color: #28a745; /* Verde */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.button-close {
+  background-color: #6c757d; /* Gris */
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* Estilos para el Ticket */
+.ticket-container {
+  background-color: #fff;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace; /* Tipografía tipo recibo */
+  border: 1px dashed #ccc;
+}
+
+.ticket-logo {
+  display: block;
+  width: 150px;
+  margin: 0 auto 15px;
+}
+
+.ticket-container h2 {
+  text-align: center;
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.ticket-container p {
+  text-align: center;
+  margin: 0 0 10px;
+  font-size: 12px;
+}
+
+.ticket-items {
+  margin: 20px 0;
+}
+
+.ticket-item, .ticket-total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.ticket-total {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.ticket-footer {
+  margin-top: 20px;
+  font-size: 10px;
+  color: #888;
+}
+
+/* ... (todos tus estilos anteriores) ... */
+
+/* --- Estilos para el nuevo Panel de Administrador --- */
+.admin-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.admin-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+}
+
+.admin-section h3 {
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.admin-section form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.product-manage-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.product-manage-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+.product-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-controls select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ... (tus estilos anteriores) ... */
+
+/* Estilos para el botón de editar */
+.edit-btn {
+  background-color: #ffc107; /* Amarillo */
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilos para el modal de edición */
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.modal-content form label {
+  font-weight: bold;
+  font-size: 14px;
+}
+.modal-content form input,
+.modal-content form select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Estilos para la vista de pedidos */
+/* Estilos para la vista de pedidos */
+.orders-view {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+.orders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+.orders-header h2 {
+  margin: 0;
+  color: #333;
+}
+.no-orders-message {
+  text-align: center;
+  color: #888;
+  padding: 40px;
+}
+
+/* Nuevo estilo para el botón de volver (icono) */
+.back-button {
+  background-color: #e9ecef;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #495057;
+  font-size: 18px;
+  transition: all 0.2s ease-in-out;
+}
+.back-button:hover {
+  background-color: #dee2e6;
+  transform: scale(1.1);
+}
+
+/* Estilo para la lista y tarjetas de pedidos */
+.orders-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.order-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  overflow: hidden; /* para que el borde redondeado funcione bien */
+}
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f7f7f7;
+  padding: 10px 15px;
+  font-weight: bold;
+  color: #555;
+  font-size: 14px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.order-items-list {
+  list-style: none;
+  padding: 15px;
+  margin: 0;
+}
+.order-items-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.order-items-list li:last-child {
+  border-bottom: none;
+}
+.order-total {
+  font-weight: bold;
+  text-align: right;
+  padding: 15px;
+  background-color: #f7f7f7;
+  margin: 0;
+  border-top: 1px solid #e0e0e0;
 }
