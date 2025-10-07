@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/regalitos-grettel-app/static/css/main.e72bcbdc.css",
+    "main.js": "/regalitos-grettel-app/static/js/main.0a7524f7.js",
+    "static/js/453.6a448253.chunk.js": "/regalitos-grettel-app/static/js/453.6a448253.chunk.js",
+    "index.html": "/regalitos-grettel-app/index.html",
+    "main.e72bcbdc.css.map": "/regalitos-grettel-app/static/css/main.e72bcbdc.css.map",
+    "main.0a7524f7.js.map": "/regalitos-grettel-app/static/js/main.0a7524f7.js.map",
+    "453.6a448253.chunk.js.map": "/regalitos-grettel-app/static/js/453.6a448253.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e72bcbdc.css",
+    "static/js/main.0a7524f7.js"
+  ]
+}
