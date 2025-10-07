@@ -9,11 +9,7 @@ import './App.css';
 function App() {
   // --- ESTADOS ---
   const [sections, setSections] = useState(['Artículos Nuevos', 'Artículos en Oferta']);
-  const [products, setProducts] = useState([
-    { id: 1, name: 'Taza Personalizada', price: 150, image: 'https://via.placeholder.com/150', section: 'Artículos Nuevos' },
-    { id: 2, name: 'Playera Estampada', price: 250, image: 'https://via.placeholder.com/150', section: 'Artículos Nuevos' },
-    { id: 3, name: 'Llavero Acrílico', price: 80, image: 'https://via.placeholder.com/150', section: 'Artículos en Oferta' },
-    { id: 4, name: 'Gorra Bordada', price: 200, image: 'https://via.placeholder.com/150', section: 'Artículos en Oferta' },
+ const [products, setProducts] = useState([,
   ]);
   const [cart, setCart] = useState([]);
   const [isAdmin, setIsAdmin] = useState(false);
