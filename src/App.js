@@ -9,8 +9,10 @@ import './App.css';
 function App() {
   // --- ESTADOS ---
   const [sections, setSections] = useState(['Artículos Nuevos', 'Artículos en Oferta']);
- const [products, setProducts] = useState([,
-  ]);
+ // --- LÍNEA CORREGIDA ---
+  // Inicializamos el estado de productos como un arreglo verdaderamente vacío.
+  const [products, setProducts] = useState([]); 
+  
   const [cart, setCart] = useState([]);
   const [isAdmin, setIsAdmin] = useState(false);
   const [showingLogin, setShowingLogin] = useState(false);
